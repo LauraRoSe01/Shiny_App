@@ -1,0 +1,55 @@
+---
+title: "presentation"
+author: "Laura Robledo"
+date: "02/10/2020"
+output: slidy_presentation
+---
+
+Predicting Diamond Price 
+========================================================
+
+This shiny app was built as part of Coursera´s Developing Data Products final project.
+
+The app calculates the price of a diamond based on the following:
+
+- Carat
+- Clarity
+- Cut
+
+For this, ggplot2´s diamond data set will be used.
+
+Linear Model for Price Prediction
+========================================================
+
+
+```{r, warning=FALSE}
+library(ggplot2)
+data(diamonds)
+head(diamonds, 3)
+```
+
+
+```{r, eval = FALSE}
+lm(price ~ carat + clarity + cut, data = diamonds)
+```
+
+App picture
+========================================================
+
+```{r, echo=FALSE, warning=FALSE, include=FALSE}
+getwd()
+setwd("C:/Users/waws0/Documents/R/Curso/Data Products/Dimonds")
+
+```
+
+```{r, echo=FALSE, comment=FALSE, out.width=400, out.height=500, message=FALSE, warning=FALSE, error=FALSE}
+   knitr::include_graphics("app.jpg")
+```
+
+
+Conclusion
+========================================================
+
+As we can see, this shiny app is extremely convenient and easy to use for those that need to quickly determine the price of a diamond.
+
+This is particularly useful for people that are not in the business but need to do a one off purchase and need to be certain that they are getting a good deal.
